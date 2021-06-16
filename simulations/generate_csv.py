@@ -106,4 +106,4 @@ def get_filenames(directory):
 
 if __name__ == '__main__':
 
-    generate_data_files('kml_paths', 'xml_paths', 'csv_paths')
+    generate_data_files('kml_paths', 'xml_paths', 'csv_paths', replace=True)
