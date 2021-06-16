@@ -15,7 +15,7 @@ class XMLParse:
     def __init__(self, path: str):
         """
         Pass in the path to the XML file to be parsed
-        Initializes the class tree member
+        Initializes the class tree and root members.
         :param path: Path of the file
         """
         f = open(path)
@@ -39,8 +39,8 @@ class ParseGoogleEarthPathXML(XMLParse):
 
     def get_coordinates(self):
         """
-        Gets the coordinates from the XML file
-        :return: List of coordinates
+        Gets the coordinates from the XML file and returns a Pandas data frame.
+        :return: Pandas data frame
         """
         coord_str = ""
 
@@ -48,35 +48,30 @@ class ParseGoogleEarthPathXML(XMLParse):
             if item.tag == self.COORDS_TAG:
                 coord_str = item.text   # String of coordinates
 
-        # Remove escape characters from beginning
-        modified_coord = self._slice_escape_characters(coord_str)
+        # split up into the individual coordinate groups
+        coords = coord_str.split()
 
-        # Remove spaces and add commas
-        final = self._remove_spaces_add_commas(modified_coord)
+        data_array = []
+        # for each coordinate group
+        for c in coords:
+            # split to get the individual coordinates
+            values = c.split(",")
 
-        return final
+            # swap latitude and longitude positions
+            values[0], values[1] = float(values[1]), float(values[0])
+
+            data_array.append(values)
+
+        data_frame = pd.DataFrame(np.array(data_array), columns=['latitude', 'longitude', 'altitude_relative_to_ground'])
+
+        return data_frame
 
     @staticmethod
-    def _slice_escape_characters(coords):
+    def write_to_csv(data_frame, path):
         """
-        The same escape characters are present in front of the coordinate string. Slice the coordinate
-        string to return just the coordinates
-        :param coords: Coordinates string
-        :return: str
+        Writes the data_frame to a csv file
+        :param data_frame: Pandas dataframe
+        :param path: Filename
+        :return: none
         """
-        return coords.replace('\n', "").replace('\t', "")
-
-    @staticmethod
-    def _remove_spaces_add_commas(coords):
-        """
-        Replace spaces between the coordinates with commas, and strip the last comma
-        :param coords:
-        :return: str
-        """
-        new_coords = coords.replace(" ", ",")
-        return new_coords.rstrip(new_coords[-1])
-
-
-
-
-
+        data_frame.to_csv(path)
