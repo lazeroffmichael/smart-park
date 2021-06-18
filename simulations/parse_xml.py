@@ -19,6 +19,7 @@ class XMLParse:
         :param path: Path of the file
         """
         f = open(path)
+        self.path = path
         self.tree = et.parse(f)
         self.root = self.get_root()
 
@@ -39,14 +40,15 @@ class ParseGoogleEarthPathXML(XMLParse):
 
     def get_coordinates(self):
         """
-        Gets the coordinates from the XML file and returns a Pandas data frame.
+        Gets the coordinates from the XML file and returns an array of the coordinates and whether or not the the path
+        leads to the garage
         :return: Pandas data frame
         """
         coord_str = ""
 
         for item in self.root.iter():
             if item.tag == self.COORDS_TAG:
-                coord_str = item.text   # String of coordinates
+                coord_str = item.text  # String of coordinates
 
         # split up into the individual coordinate groups
         coords = coord_str.split()
@@ -58,20 +60,17 @@ class ParseGoogleEarthPathXML(XMLParse):
             values = c.split(",")
 
             # swap latitude and longitude positions
-            values[0], values[1] = float(values[1]), float(values[0])
+            values[0], values[1], values[2] = float(values[1]), float(values[0]), float(values[2])
 
-            data_array.append(values)
+            for items in values:
+                data_array.append(items)
 
-        data_frame = pd.DataFrame(np.array(data_array), columns=['latitude', 'longitude', 'altitude_relative_to_ground'])
+        # append whether the path is valid or not
+        if "Missed" not in self.path:   # not missed so append 1
+            data_array.append(1)    # classifier for made it to garage
+        else:
+            data_array.append(0)    # missed
 
-        return data_frame
+        return data_array
 
-    @staticmethod
-    def write_to_csv(data_frame, path):
-        """
-        Writes the data_frame to a csv file
-        :param data_frame: Pandas dataframe
-        :param path: Filename
-        :return: none
-        """
-        data_frame.to_csv(path)
+
