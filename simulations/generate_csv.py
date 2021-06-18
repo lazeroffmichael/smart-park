@@ -13,6 +13,8 @@ Goal is to only need to save the KML file, and the rest is automatically handled
 import os
 import shutil
 import os.path
+import numpy as np
+import pandas as pd
 
 from simulations.parse_xml import ParseGoogleEarthPathXML
 
@@ -59,7 +61,7 @@ def write_to_data_file(xml_path, filename, csv_path, replace=False):
         earth.write_to_csv(earth.get_coordinates(), new_path)
 
 
-def convert_kml_to_xml(kml_path, xml_path, csv_path, replace=False):
+def convert_kml_to_xml(kml_path, xml_path, replace=False):
     """
     Converts the files in the kml_path directory to .xml and saves in the xml_path directory if the corresponding
     filename does not already exist in the xml_path directory.
@@ -85,8 +87,6 @@ def convert_kml_to_xml(kml_path, xml_path, csv_path, replace=False):
         if replace or renamed not in xml_names:
             shutil.copyfile(f'./{kml_path}/{kname}', f'./{xml_path}/{renamed}')
 
-            write_to_data_file(xml_path, renamed, csv_path, replace)
-
 
 def get_filenames(directory):
     """
@@ -104,6 +104,56 @@ def get_filenames(directory):
     return filenames
 
 
+def create_dataframe(data, index_names=None, coordinate_amount=20):
+    """
+    Creates the data frame based on the array of the data
+    :param index_names:
+    :param coordinate_amount:
+    :param data:
+    :return:
+    """
+    columns = []
+    for index in range(1, coordinate_amount + 1):
+        latitude = 'latitude_' + str(index)
+        longitude = 'longitude_' + str(index)
+        altitude = 'altitude_relative_to_ground_' + str(index)
+        columns.append(latitude)
+        columns.append(longitude)
+        columns.append(altitude)
+
+    columns.append('enter-parking')
+
+    if index_names is not None:
+        data_frame = pd.DataFrame(data, index=index_names, columns=columns)
+
+    else:
+        data_frame = pd.DataFrame(data, columns=columns)
+
+    return data_frame
+
+
+def write_to_csv(data_frame, path):
+    """
+    Writes the data_frame to a csv file
+    :param data_frame: Pandas dataframe
+    :param path: Filename
+    :return: none
+    """
+    data_frame.to_csv(path)
+
+
 if __name__ == '__main__':
 
-    generate_data_files('kml_paths', 'xml_paths', 'csv_paths', replace=True)
+    convert_kml_to_xml('kml_paths', 'xml_paths', replace=True)
+    xml_files = get_filenames('xml_paths')
+    data = []
+    for xml in xml_files:
+        # make the path
+        earth = ParseGoogleEarthPathXML(f'./xml_paths/{xml}')
+        data.append(earth.get_coordinates())
+
+    df = create_dataframe(data, xml_files, coordinate_amount=20)
+
+    write_to_csv(df, './csv_paths/cottage_grove_paths.csv')
+
+
