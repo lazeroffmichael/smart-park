@@ -1,0 +1,39 @@
+site_name: "UNLV Smart Cities REU 2021 - Smart Parking Application"
+site_description: "Smart Parking Application"
+repo_name: "lazeroffmichael/smart-park"
+site_url: https://example.com/
+
+
+nav:
+  - Overview: index.md
+  - Modules:
+    - Data: data.md
+    - Model: model.md
+    - Cloud: cloud.md
+    - App: app.md
+theme:
+  name: "material"
+  palette:
+    primary:
+      blue
+  features:
+    - navigation.instant
+    - toc.integrate
+
+extra_css:
+  - css/mkdocstrings.css
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+          python:
+              rendering:
+                  show_source: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences

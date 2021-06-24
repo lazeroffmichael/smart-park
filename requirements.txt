@@ -6,3 +6,5 @@ jupyter
 seaborn
 matplotlib
 sklearn
+mkdocs-material
+mkdocstrings
