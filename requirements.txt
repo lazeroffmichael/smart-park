@@ -1,3 +1,4 @@
+tensorflow
 pytest
 pandas
 numpy
