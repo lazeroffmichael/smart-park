@@ -1,7 +1,8 @@
-site_name: "UNLV Smart Cities REU 2021 - Smart Parking Application"
+site_name: "UNLV Smart Cities REU 2021"
 site_description: "Smart Parking Application"
+site_url: "https://lazeroffmichael.github.io/smart-park/"
+repo_url: "https://github.com/lazeroffmichael/smart-park"
 repo_name: "lazeroffmichael/smart-park"
-site_url: https://example.com/
 
 
 nav:
