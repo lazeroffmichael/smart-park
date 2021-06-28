@@ -7,8 +7,8 @@ repo_name: "lazeroffmichael/smart-park"
 
 nav:
   - Overview: index.md
-  - Modules:
-    - Data: data.md
+  - Components:
+    - Data Simulation: data.md
     - Model: model.md
     - Cloud: cloud.md
     - App: app.md
