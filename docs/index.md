@@ -9,8 +9,7 @@ The mobile app will monitor the driver’s behavior and detect when the driver i
 will be sent to the cloud and shared with drivers who are searching for a parking spot. The embedded system in the car 
 will include a GPS receiver to post periodic vehicle location to the cloud and sense adjacent parking spots to provide 
 additional information. The system will be able to provide the information about occupancy in each lot and provide live 
-information about the closest parking lot with free spots. Students will work with smartphone programming, 
-cloud technologies (including MQTT, SQL), and embedded systems (BLE, programming, interfacing with sensors).
+information about the closest parking lot with free spots. 
 
 ## Goals
 
