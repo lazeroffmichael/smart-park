@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>9_C.kml</name>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Placemark>
+		<name>9_C</name>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				-115.1396141627083,36.11180807887357,0 -115.1396776571115,36.1118159380756,0 -115.1397349927739,36.11181987067867,0 -115.1398038786482,36.11182193740549,0 -115.1398635258756,36.1118235638159,0 -115.1399228905111,36.11182153941544,0 -115.1400066510741,36.1118230903348,0 -115.1400732671193,36.11182503957677,0 -115.1401385943709,36.11182448694274,0 -115.1402174019936,36.11182823219089,0 -115.1402964106715,36.11182831894624,0 -115.1403756496217,36.1118284058709,0 -115.1404366088736,36.11182514773679,0 -115.1405334788856,36.11182851636124,0 -115.1405717023329,36.11182662168955,0 -115.1406005045925,36.11180927120688,0 -115.1406158531419,36.11179227865227,0 -115.140637390846,36.1117727454189,0 -115.1406425589369,36.11175997563512,0 -115.1406545881985,36.11174077767376,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
