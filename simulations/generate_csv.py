@@ -13,52 +13,9 @@ Goal is to only need to save the KML file, and the rest is automatically handled
 import os
 import shutil
 import os.path
-import numpy as np
 import pandas as pd
 
 from simulations.parse_xml import ParseGoogleEarthPathXML
-
-
-def generate_data_files(kml_path, xml_path, csv_path, replace=False):
-    """
-    Main calling method for the process
-    :param kml_path:
-    :param xml_path:
-    :param csv_path:
-    :param replace:
-    :return:
-    """
-    convert_kml_to_xml(kml_path, xml_path, csv_path, replace)
-
-
-def write_to_data_file(xml_path, filename, csv_path, replace=False):
-    """
-    Takes the xml file, extracts the coordinates from it, and writes to csv file in the csv_path
-    :param filename:
-    :param replace:
-    :param xml_path: XML Path
-    :param csv_path: CSV Path
-    :return: None
-    """
-
-    # get the csv file names
-    csv_names = set(get_filenames(csv_path))
-
-    # replace the name
-    renamed = filename.replace('.xml', '.csv')
-
-    # current path for filename
-    path = f'./{xml_path}/{filename}'
-
-    # google earth object
-    earth = ParseGoogleEarthPathXML(path)
-
-    # new path
-    new_path = f'./{csv_path}/{renamed}'
-
-    if replace or renamed not in csv_names:
-        # create data object
-        earth.write_to_csv(earth.get_coordinates(), new_path)
 
 
 def convert_kml_to_xml(kml_path, xml_path, replace=False):
@@ -133,16 +90,6 @@ def create_dataframe(data, index_names=None, coordinate_amount=20):
     return data_frame
 
 
-def write_to_csv(data_frame, path):
-    """
-    Writes the data_frame to a csv file
-    :param data_frame: Pandas dataframe
-    :param path: Filename
-    :return: none
-    """
-    data_frame.to_csv(path)
-
-
 def delete_files_from_directory(directory):
     """
     Deletes the files from a directory.
@@ -154,19 +101,31 @@ def delete_files_from_directory(directory):
             os.remove(f'{directory}/{file}')
 
 
-def generate_csv():
+def generate_csv(kml_path, xml_path, filename, replace=False):
+    """
+    Generates the csv file with the coordinate data.
+
+    Args:
+        filename: (str) filename of the csv file to be generated
+        xml_path: (str) Path to the xml folder
+        kml_path: (str) Path to the kml folder
+        replace: (bool) Whether or not to replace the xml files if they already exist
+
+    Returns: None
+
+    """
     # Convert the kml files in the directory to xml in the xml paths folder
-    convert_kml_to_xml('test_kml_paths', 'test_xml_paths', replace=True)
+    convert_kml_to_xml(kml_path, xml_path, replace=replace)
 
     # Get the filenames from the xml paths
-    xml_files = get_filenames('test_xml_paths')
+    xml_files = get_filenames(xml_path)
 
     df = None  # Final dataframe to be used
 
     # For each file in the directory
     for xml in xml_files:
         # Create the object for the file
-        earth = ParseGoogleEarthPathXML(f'./test_xml_paths/{xml}')
+        earth = ParseGoogleEarthPathXML(f'{xml_path}/{xml}')
         # Get the coordinates from the file in a list
         data = earth.get_coordinates()
         # create the dataframe with the coordinates
@@ -175,9 +134,9 @@ def generate_csv():
         df = pd.concat([df, temp], axis=0)
 
     # Write the dataframe to the file
-    df.to_csv('./test_csv_paths/test_paths.csv')
+    df.to_csv(f'./{filename}')
 
 
 if __name__ == '__main__':
-    delete_files_from_directory('./test_xml_paths')
-    generate_csv()
+    delete_files_from_directory('./xml_paths')
+    generate_csv(kml_path='kml_paths', xml_path='xml_paths', filename='paths.csv', replace=True)
