@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>C.kml</name>
+	<StyleMap id="m_ylw-pushpin9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin8">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl11">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl15">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl15</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl16">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin15">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl14">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl13">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl9">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl8">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl12">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin12">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>C</name>
+		<visibility>0</visibility>
+		<open>1</open>
+		<Placemark>
+			<name>1_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin8</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1416872862615,36.11187375244208,0 -115.1416301069751,36.11187580327793,0 -115.1415701622328,36.11187888680522,0 -115.14151713365,36.11187754991492,0 -115.141459903393,36.1118771923264,0 -115.1413967736247,36.11187419275323,0 -115.1413209657293,36.11186822908936,0 -115.1412516990716,36.11186965616002,0 -115.1412027354298,36.11186968143532,0 -115.1411566465241,36.11186866551618,0 -115.1410986830587,36.11186825580513,0 -115.1410250456229,36.1118682645042,0 -115.1409724810689,36.11187042707583,0 -115.1409176676218,36.11186665895907,0 -115.1408418219071,36.11185487783361,0 -115.1407984569992,36.1118012662908,0 -115.1407897733923,36.1117353078768,0 -115.1407916993731,36.11165779709396,0 -115.1407528024873,36.11161237240119,0 -115.1406849716521,36.11159186525659,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>2_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin9</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1402911680434,36.11224593519832,0 -115.1402886894323,36.11220701836524,0 -115.1402849971881,36.11216904983201,0 -115.140278857044,36.11213036645506,0 -115.1402806995671,36.11208863968886,0 -115.1402922564782,36.11204559501429,0 -115.1403092604084,36.11199261862217,0 -115.140352208423,36.11195220038583,0 -115.1404649147317,36.1119323730825,0 -115.1406203852191,36.11193086565322,0 -115.1407035543187,36.11193481801989,0 -115.1407760640302,36.11192816994611,0 -115.1407840641583,36.11189074176294,0 -115.1407923399141,36.11185202405707,0 -115.140799833852,36.11176478765304,0 -115.1407958538927,36.11170877951109,0 -115.1407925749834,36.1116529910279,0 -115.1407591579857,36.11162843692804,0 -115.1407373596938,36.11160989859695,0 -115.1407015891974,36.11160231069268,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>3_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin10</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1407526790915,36.11254463215503,0 -115.1407515300314,36.11252005790899,0 -115.1407475702868,36.11248873815217,0 -115.1407466538448,36.11245387913905,0 -115.1407444606505,36.11241677139519,0 -115.1407482653521,36.11238044691194,0 -115.140748849881,36.11234558459683,0 -115.1407431638557,36.11230717617009,0 -115.1407429630645,36.11226122859669,0 -115.1407488777607,36.11221019525456,0 -115.1407526349682,36.11215891862168,0 -115.1407522139269,36.11211841392324,0 -115.1407564847692,36.11204741351467,0 -115.1407576176244,36.11198401985564,0 -115.1407618041167,36.11191873717258,0 -115.1407687369092,36.11184241625874,0 -115.1407753859636,36.11177572879198,0 -115.1407751697962,36.11168821038671,0 -115.1407694782355,36.11164287120304,0 -115.1407007324663,36.1116039164328,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>4_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin11</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1396855282362,36.1119209683051,0 -115.1397517424027,36.11192411569651,0 -115.1398318496455,36.11192937410283,0 -115.1399299062495,36.11193548393587,0 -115.1400284602716,36.11192706799622,0 -115.1401491447609,36.11193134016576,0 -115.140263914161,36.11193532935802,0 -115.1403635154751,36.11193418514852,0 -115.1404757006428,36.1119365677534,0 -115.1405821283506,36.11193718980881,0 -115.1406813017605,36.11193745202107,0 -115.140763862755,36.11193839983462,0 -115.1407756185081,36.11189042682655,0 -115.1407872425494,36.11184543492038,0 -115.1407942245398,36.11178704293251,0 -115.1407899302511,36.11171155799119,0 -115.1407952352714,36.11166539309487,0 -115.1407570332559,36.11162497907102,0 -115.140704168828,36.11160183892505,0 -115.1406805558007,36.11159504105372,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>5_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin12</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1413130991565,36.11120316750844,0 -115.1412447597325,36.11119992063168,0 -115.1411720592597,36.11120473687466,0 -115.1410958852958,36.11121344144304,0 -115.1410151450577,36.11121776691201,0 -115.140934828343,36.11122206955961,0 -115.1408602805714,36.11123062620997,0 -115.1408127178794,36.11123837638659,0 -115.1407676004423,36.11125605883309,0 -115.1407430381443,36.11129186389898,0 -115.1407242989025,36.11132893400865,0 -115.1407046733246,36.11137048871891,0 -115.140701658875,36.11140275804244,0 -115.1406985976074,36.11143257235709,0 -115.1407056100143,36.11146566480306,0 -115.1407074169328,36.11149443309768,0 -115.1407048163649,36.1115289487821,0 -115.1407046878855,36.11157539460288,0 -115.1406870174088,36.11159021356186,0 -115.1406689339611,36.1115971162099,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>6_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin13</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1419200581996,36.11156842341617,0 -115.1418531279591,36.11156805393476,0 -115.1417854256948,36.11157044009177,0 -115.1417238680395,36.1115772640815,0 -115.1416526679392,36.1115738816728,0 -115.1415928599552,36.11157104039147,0 -115.1415113802069,36.11156855631988,0 -115.1414519024052,36.11157126373696,0 -115.1413950892653,36.11156856454785,0 -115.1413226525966,36.11156512301108,0 -115.141274361526,36.11156282860871,0 -115.1411957979635,36.11156323073792,0 -115.1411343512664,36.11156580457647,0 -115.1410859586987,36.11156761049676,0 -115.1410561322132,36.11156892313206,0 -115.1410134582067,36.11157505156544,0 -115.1409260823085,36.11158840115568,0 -115.1408353941264,36.11159076185104,0 -115.1407508060276,36.11159470193376,0 -115.140695409433,36.11159471197975,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>7_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin14</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1416678796384,36.11184435296948,0 -115.1416086724876,36.11184154012031,0 -115.1415541013413,36.11184685695311,0 -115.1414895030302,36.11184603826793,0 -115.1414193949791,36.1118404569619,0 -115.1413408230124,36.11183897423488,0 -115.1412775086686,36.11184045423564,0 -115.1412107901788,36.1118395220665,0 -115.1411609420278,36.1118371535451,0 -115.1410879299433,36.11183814769316,0 -115.1410291833242,36.11184091228773,0 -115.1409617223603,36.11183770672754,0 -115.1408890646694,36.11183203483559,0 -115.1408142111848,36.11181619787025,0 -115.1407736623169,36.11180526101146,0 -115.1407398763148,36.11180025938688,0 -115.1407081598127,36.11179193140932,0 -115.1406832802555,36.11177814432806,0 -115.1406654878415,36.11176106647392,0 -115.1406546817622,36.11173936384921,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>8_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin15</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.14142450657,36.11124932530297,0 -115.1413974387743,36.11129231274698,0 -115.1413646986109,36.11133379214792,0 -115.1413339777704,36.11136382688422,0 -115.1412876155416,36.11140092775814,0 -115.1412432093541,36.11145344553959,0 -115.1412203171725,36.11148449596568,0 -115.1411907388703,36.1115129707285,0 -115.1411606063282,36.11153927938913,0 -115.1411171371788,36.11156740923755,0 -115.141073808702,36.11157576662395,0 -115.1410315022072,36.11158850227115,0 -115.1409990907613,36.11159719150096,0 -115.1409374457148,36.11160730357488,0 -115.1408606175529,36.11164064260562,0 -115.1408157268256,36.1116580163102,0 -115.1407639846189,36.11168022784955,0 -115.1407272333513,36.11170136819042,0 -115.1407082794415,36.11171374715595,0 -115.1406631899049,36.11172605843867,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>9_C</name>
+			<visibility>0</visibility>
+			<styleUrl>#m_ylw-pushpin16</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1396141627083,36.11180807887357,0 -115.1396776571115,36.1118159380756,0 -115.1397349927739,36.11181987067867,0 -115.1398038786482,36.11182193740549,0 -115.1398635258756,36.1118235638159,0 -115.1399228905111,36.11182153941544,0 -115.1400066510741,36.1118230903348,0 -115.1400732671193,36.11182503957677,0 -115.1401385943709,36.11182448694274,0 -115.1402174019936,36.11182823219089,0 -115.1402964106715,36.11182831894624,0 -115.1403756496217,36.1118284058709,0 -115.1404366088736,36.11182514773679,0 -115.1405334788856,36.11182851636124,0 -115.1405717023329,36.11182662168955,0 -115.1406005045925,36.11180927120688,0 -115.1406158531419,36.11179227865227,0 -115.140637390846,36.1117727454189,0 -115.1406425589369,36.11175997563512,0 -115.1406545881985,36.11174077767376,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import classification_report, confusion_matrix
 
 
 def main():
@@ -45,6 +46,9 @@ if __name__ == '__main__':
     # Y feature is whether the path enters the parking lot
     label = df['enter-parking'].values
 
+    print(X)
+    print(label)
+
     # Split the training and testing data
     X_train, X_test, y_train, y_test = train_test_split(X, label, test_size=0.25, random_state=101)
 
@@ -57,7 +61,7 @@ if __name__ == '__main__':
     X_test = scaler.transform(X_test)
 
     # Early stop object - prevents initial overtraining from too many epochs
-    early_stop = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=25)
+    #early_stop = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=25)
 
     # Create model
     model = Sequential()
@@ -66,13 +70,15 @@ if __name__ == '__main__':
     model.add(Dense(60, activation='relu'))
 
     # Dropout layer 1
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.3))
+
+    model.add(Dense(45, activation='relu'))
 
     # 1 inner layer
     model.add(Dense(30, activation='relu'))
 
     # Dropout layer 2
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.3))
 
     # Binary classifcation
     model.add(Dense(1, activation='sigmoid'))
@@ -81,11 +87,26 @@ if __name__ == '__main__':
     model.compile(loss='binary_crossentropy', optimizer='adam')
 
     # Fit model
+    # model.fit(x=X_train,
+    #           y=y_train,
+    #           epochs=300,
+    #           validation_data=(X_test, y_test),
+    #           callbacks=early_stop)
+
     model.fit(x=X_train,
               y=y_train,
-              epochs=300,
-              validation_data=(X_test, y_test),
-              callbacks=early_stop)
+              epochs=50,
+              validation_data=(X_test, y_test))
+
+    losses = pd.DataFrame(model.history.history)
+
+    losses.plot()
+
+    predictions = (model.predict(X_test) > 0.5).astype("int32")
+
+    # Print results
+    print(classification_report(y_test, predictions))
+    print(confusion_matrix(y_test, predictions))
 
     # Save the model
     model.save('saved_model')

@@ -113,6 +113,7 @@ def create_dataframe(data, index_names=None, coordinate_amount=20):
     :return:
     """
     columns = []
+    columns.append('name')
     for index in range(1, coordinate_amount + 1):
         latitude = 'latitude_' + str(index)
         longitude = 'longitude_' + str(index)
@@ -142,18 +143,41 @@ def write_to_csv(data_frame, path):
     data_frame.to_csv(path)
 
 
-if __name__ == '__main__':
+def delete_files_from_directory(directory):
+    """
+    Deletes the files from a directory.
+    """
+    # TODO: Implement for generate csv so xml files are deleted before new creation
 
-    convert_kml_to_xml('kml_paths', 'xml_paths', replace=True)
-    xml_files = get_filenames('xml_paths')
-    data = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            os.remove(f'{directory}/{file}')
+
+
+def generate_csv():
+    # Convert the kml files in the directory to xml in the xml paths folder
+    convert_kml_to_xml('test_kml_paths', 'test_xml_paths', replace=True)
+
+    # Get the filenames from the xml paths
+    xml_files = get_filenames('test_xml_paths')
+
+    df = None  # Final dataframe to be used
+
+    # For each file in the directory
     for xml in xml_files:
-        # make the path
-        earth = ParseGoogleEarthPathXML(f'./xml_paths/{xml}')
-        data.append(earth.get_coordinates())
+        # Create the object for the file
+        earth = ParseGoogleEarthPathXML(f'./test_xml_paths/{xml}')
+        # Get the coordinates from the file in a list
+        data = earth.get_coordinates()
+        # create the dataframe with the coordinates
+        temp = create_dataframe(data, coordinate_amount=20)
+        # concat the dataframe to the existing dataset
+        df = pd.concat([df, temp], axis=0)
 
-    df = create_dataframe(data, xml_files, coordinate_amount=20)
+    # Write the dataframe to the file
+    df.to_csv('./test_csv_paths/test_paths.csv')
 
-    write_to_csv(df, './csv_paths/cottage_grove_paths.csv')
 
-
+if __name__ == '__main__':
+    delete_files_from_directory('./test_xml_paths')
+    generate_csv()

@@ -37,6 +37,7 @@ class ParseGoogleEarthPathXML(XMLParse):
     """
     COORDS_TAG = '{http://www.opengis.net/kml/2.2}coordinates'
     COORDS_PARENT = '{http://www.opengis.net/kml/2.2}Placemark'
+    NAME_TAG =  '{http://www.opengis.net/kml/2.2}name'
 
     def get_coordinates(self):
         """
@@ -46,30 +47,41 @@ class ParseGoogleEarthPathXML(XMLParse):
         """
         coord_str = ""
 
+        data_array = []
+        name = ''
+
         for item in self.root.iter():
+            if item.tag == self.NAME_TAG:
+                name = item.text
+
             if item.tag == self.COORDS_TAG:
                 coord_str = item.text  # String of coordinates
 
-        # split up into the individual coordinate groups
-        coords = coord_str.split()
+                # split up into the individual coordinate groups
+                coords = coord_str.split()
 
-        data_array = []
-        # for each coordinate group
-        for c in coords:
-            # split to get the individual coordinates
-            values = c.split(",")
+                temp = []
 
-            # swap latitude and longitude positions
-            values[0], values[1], values[2] = float(values[1]), float(values[0]), float(values[2])
+                temp.append(name)
 
-            for items in values:
-                data_array.append(items)
+                # for each coordinate group
+                for c in coords:
+                    # split to get the individual coordinates
+                    values = c.split(",")
 
-        # append whether the path is valid or not
-        if "Missed" not in self.path:   # not missed so append 1
-            data_array.append(1)    # classifier for made it to garage
-        else:
-            data_array.append(0)    # missed
+                    # swap latitude and longitude positions
+                    values[0], values[1], values[2] = float(values[1]), float(values[0]), float(values[2])
+
+                    for items in values:
+                        temp.append(items)
+
+                # append whether the path is valid or not
+                if "Missed" not in name:   # not missed so append 1
+                    temp.append(1)    # classifier for made it to garage
+                else:
+                    temp.append(0)    # missed
+
+                data_array.append(temp)
 
         return data_array
 
