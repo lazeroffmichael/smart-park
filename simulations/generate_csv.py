@@ -18,13 +18,12 @@ import pandas as pd
 from simulations.parse_xml import ParseGoogleEarthPathXML
 
 
-def convert_kml_to_xml(kml_path, xml_path, replace=False):
+def convert_kml_to_xml(kml_path, xml_path):
     """
     Converts the files in the kml_path directory to .xml and saves in the xml_path directory if the corresponding
     filename does not already exist in the xml_path directory.
 
     :param csv_path:
-    :param replace:
     :param kml_path: Path of the kml directory
     :param xml_path: Path of the xml directory
     :return: None
@@ -40,9 +39,8 @@ def convert_kml_to_xml(kml_path, xml_path, replace=False):
         # replace the .kml with .xml
         renamed = kname.replace('.kml', '.xml')
 
-        # if replace is true, then we are going to copy the file regardless if it already exists
-        if replace or renamed not in xml_names:
-            shutil.copyfile(f'./{kml_path}/{kname}', f'./{xml_path}/{renamed}')
+        # copy the file to the xml directory
+        shutil.copyfile(f'./{kml_path}/{kname}', f'./{xml_path}/{renamed}')
 
 
 def get_filenames(directory):
@@ -101,21 +99,29 @@ def delete_files_from_directory(directory):
             os.remove(f'{directory}/{file}')
 
 
-def generate_csv(kml_path, xml_path, filename, replace=False):
+def generate_csv(kml_path, csv_path):
     """
     Generates the csv file with the coordinate data.
 
     Args:
-        filename: (str) filename of the csv file to be generated
-        xml_path: (str) Path to the xml folder
+        csv_path: (str) filename of the csv file to be generated
         kml_path: (str) Path to the kml folder
         replace: (bool) Whether or not to replace the xml files if they already exist
 
     Returns: None
 
     """
+    xml_path = 'xml_temp'
+
+    # Create separate directory for the xml files to be created
+    try:
+        os.mkdir(xml_path)
+    except FileExistsError:
+        # Delete the files from the
+        delete_files_from_directory(xml_path)
+
     # Convert the kml files in the directory to xml in the xml paths folder
-    convert_kml_to_xml(kml_path, xml_path, replace=replace)
+    convert_kml_to_xml(kml_path, xml_path)
 
     # Get the filenames from the xml paths
     xml_files = get_filenames(xml_path)
@@ -134,9 +140,16 @@ def generate_csv(kml_path, xml_path, filename, replace=False):
         df = pd.concat([df, temp], axis=0)
 
     # Write the dataframe to the file
-    df.to_csv(f'./{filename}')
+    df.to_csv(csv_path)
+
+    # Remove the temp xml directory
+    shutil.rmtree(xml_path)
 
 
 if __name__ == '__main__':
-    delete_files_from_directory('./xml_paths')
-    generate_csv(kml_path='kml_paths', xml_path='xml_paths', filename='paths.csv', replace=True)
+
+    # Handles the creation of the normal dataset
+    generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv')
+
+    # Handles the creation of the test dataset
+    generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv')
