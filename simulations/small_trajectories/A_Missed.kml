@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>A_Missed.kml</name>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffffff55</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffffff55</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>A_Missed</name>
+		<Placemark>
+			<name>1_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410866550592,36.11040634368712,0 -115.1411067119717,36.11044002935284,0 -115.1411310976564,36.11046571583941,0 -115.1411586599972,36.11049602095114,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>2_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410988613196,36.11041129621115,0 -115.1411087110261,36.11043019584393,0 -115.1411303194204,36.11045162200038,0 -115.1411510517951,36.11047481124618,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>3_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410816146977,36.11041067110538,0 -115.1410928414081,36.110435053434,0 -115.1411097036865,36.11045674068886,0 -115.1411310992016,36.1104828249459,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>4_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411326395736,36.11043193873199,0 -115.1411525078876,36.11045771023679,0 -115.1411672296432,36.11048700166781,0 -115.1411778746454,36.11051846542141,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>5_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411554989547,36.11044071187283,0 -115.1411681415348,36.11046269363422,0 -115.1411762430677,36.11048517421327,0 -115.1411848720288,36.11050939685487,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>6_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410877175006,36.11019004767875,0 -115.1410914329954,36.11020794321232,0 -115.1410928700278,36.11023844274538,0 -115.1410958050463,36.11026947690378,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>7_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410775217587,36.11020009343536,0 -115.1410826356663,36.11021803978598,0 -115.1410862856267,36.11024119848448,0 -115.1410870549532,36.11026482901016,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>8_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410635821624,36.11019708860894,0 -115.1410684171393,36.11022475828671,0 -115.1410726534033,36.11025046630139,0 -115.1410765274455,36.11028041283047,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>9_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411001663471,36.11027433065733,0 -115.1410973138715,36.11030119014644,0 -115.1410862167425,36.11032624667214,0 -115.1410824851783,36.11035135989872,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>10_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.141085445347,36.11027496815333,0 -115.1410817670612,36.11029929796391,0 -115.141073549783,36.11032419072507,0 -115.1410734429426,36.11035175147006,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>11_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410677661912,36.1103533211146,0 -115.1410756588456,36.11037699150196,0 -115.1410840308923,36.11040235824856,0 -115.1410895170922,36.11042271714546,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>12_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410561584848,36.11036712075529,0 -115.1410628269369,36.11039239456429,0 -115.1410763834608,36.11042605128961,0 -115.1410965641687,36.11044886831094,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>13_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410699404709,36.11027816684255,0 -115.1410694580322,36.11030368069341,0 -115.1410604455959,36.11032605992926,0 -115.141060227964,36.11035364755487,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>14_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409241143184,36.11054416275392,0 -115.1409361592457,36.110570434103,0 -115.1409516429044,36.11060460619588,0 -115.1409790823131,36.11062496801453,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>16_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.140913886341,36.11054904264144,0 -115.1409181996604,36.11056971248701,0 -115.1409428928995,36.11060192780916,0 -115.1409608528048,36.11063196286567,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>17_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409029418803,36.11055842462306,0 -115.1409206386534,36.11058919884407,0 -115.1409409401588,36.11061581194772,0 -115.1409556744877,36.1106462288321,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>18_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1408951461237,36.11056771596618,0 -115.140912574703,36.11058954803858,0 -115.1409224290222,36.11061353765705,0 -115.1409451794675,36.11064355337061,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>19_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1408825819322,36.11056497513766,0 -115.1408922952722,36.11058343212934,0 -115.1409053418745,36.11061024948979,0 -115.1409239593263,36.11064155122567,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>20_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409237454015,36.11052875112254,0 -115.1409419248735,36.11057046693515,0 -115.1409594868188,36.1106148279427,0 -115.1409915550646,36.11064995077038,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>21_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409081226911,36.1105359896799,0 -115.1409243269242,36.11056988239501,0 -115.1409421492483,36.11061003774542,0 -115.140963283678,36.11064408614624,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>22_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1408904429316,36.11054070639818,0 -115.1409018464549,36.11057355023909,0 -115.1409339275325,36.11060625117608,0 -115.1409546203543,36.11063881349935,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>23_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1408794802972,36.11055709085689,0 -115.1408995158953,36.11059674902871,0 -115.1409203212831,36.11062487312685,0 -115.1409511638486,36.11066310979859,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>24_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410430985973,36.11038499308139,0 -115.1410623923667,36.11041423361119,0 -115.141084193017,36.11044649591704,0 -115.1411099686695,36.11047681934951,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>25_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410495439155,36.11019788691117,0 -115.1410564288185,36.1102248772144,0 -115.1410602230465,36.11025473567478,0 -115.1410614956752,36.11027654078861,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>26_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410409532159,36.11020346345654,0 -115.1410487060352,36.11023372145058,0 -115.1410543484176,36.11027025526526,0 -115.1410595067465,36.11029660497935,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>27_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410733208982,36.11020833420636,0 -115.1410782618284,36.11024100558793,0 -115.1410816901567,36.11027346436819,0 -115.1410809098556,36.11030577719912,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>28_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410342586312,36.11020688589263,0 -115.1410419082399,36.11024150639252,0 -115.141048508093,36.11026831692168,0 -115.1410568800949,36.11029671872618,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>29_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410464879293,36.11027939613366,0 -115.1410587941884,36.1103260146733,0 -115.1410580462008,36.11036542592515,0 -115.1410661507374,36.11040317032933,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>30_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409988833058,36.11050211117615,0 -115.1409775921427,36.11051988613724,0 -115.1409515787814,36.11054334351211,0 -115.1409270190546,36.11058192848682,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>31_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409877877713,36.1105090508847,0 -115.1409578581324,36.11052727393006,0 -115.1409364623647,36.11054664735789,0 -115.1409272641156,36.11057650016332,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>32_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409745964291,36.11050187441778,0 -115.1409466937706,36.11052252849398,0 -115.1409361614431,36.11054533517152,0 -115.1409237789495,36.11057394948718,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>33_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.140926451181,36.11054708087371,0 -115.140927319522,36.11058327294469,0 -115.1409132108521,36.11060576988812,0 -115.1409012419439,36.11063971620869,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>34_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409224114959,36.11054196196859,0 -115.1409145333639,36.11057165307075,0 -115.1409085427859,36.1106045949041,0 -115.140897428458,36.11062865763724,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>35_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409090145512,36.11055314854964,0 -115.1409003946175,36.11058715743952,0 -115.1408924216892,36.11063307375404,0 -115.1408818931733,36.11066897502866,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>36_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409001381194,36.11054557105513,0 -115.1408917019955,36.11058753385544,0 -115.1408866120134,36.11061937201527,0 -115.1408799355517,36.1106519447572,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>37_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410932335493,36.11046560864424,0 -115.141070032987,36.11047668253435,0 -115.1410479886203,36.11048778728683,0 -115.1410248242101,36.11049609057781,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>38_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.141082920399,36.11045180900661,0 -115.1410639307172,36.11046687748706,0 -115.141040704785,36.11048229259455,0 -115.1410180916323,36.11049638210488,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>39_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410649103242,36.1104273481787,0 -115.1410582384615,36.110454295126,0 -115.1410369045137,36.11047091650053,0 -115.1410202025337,36.11048608208802,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>40_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410718931687,36.11043960217289,0 -115.1410604206025,36.11046846303633,0 -115.1410358209024,36.1104839541027,0 -115.1410073195101,36.11049684854835,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>41_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.140922845371,36.11050973530837,0 -115.1409305625636,36.11053418550213,0 -115.1409363997947,36.11056567216804,0 -115.1409460880565,36.11060007435971,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>42_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1409106383713,36.11052465703957,0 -115.1409185921992,36.11054518853371,0 -115.1409280443956,36.11057356456217,0 -115.1409381340209,36.11060484377943,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>43_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411015374389,36.11047673436158,0 -115.1411201818141,36.11049101797379,0 -115.1411466586305,36.11050208871439,0 -115.1411709378303,36.11052691205295,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>44_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410754609665,36.11021114390755,0 -115.1410780134965,36.11022855537939,0 -115.1410797012601,36.11024573923417,0 -115.1410822532815,36.1102606931898,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>45_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411237420393,36.11043484117259,0 -115.1411399626314,36.11045109185576,0 -115.1411569057723,36.11046918997666,0 -115.1411634459253,36.11048326769134,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>46_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1411010614659,36.11042821308609,0 -115.1411120227315,36.11044455960341,0 -115.1411315859208,36.11045769227237,0 -115.141142760976,36.1104705949453,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>47_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410936880741,36.11043537893143,0 -115.1411116791341,36.11045621057452,0 -115.1411288045565,36.11047596721791,0 -115.1411428384137,36.11048980082019,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>48_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410831495687,36.110426717174,0 -115.1410987698513,36.11045209870147,0 -115.1411218423379,36.11047229387353,0 -115.1411452308712,36.11049862548386,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>49_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410882340825,36.11044713331597,0 -115.1411058270108,36.11046981886454,0 -115.1411219676574,36.11048586773342,0 -115.1411437641059,36.11050605295608,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>50_A_Missed</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-115.1410208215642,36.11049494914588,0 -115.1410054228207,36.11050160024692,0 -115.1409864824903,36.11051294193771,0 -115.1409612133103,36.11052462061276,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

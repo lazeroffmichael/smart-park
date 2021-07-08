@@ -135,7 +135,7 @@ def generate_csv(kml_path, csv_path):
         # Get the coordinates from the file in a list
         data = earth.get_coordinates()
         # create the dataframe with the coordinates
-        temp = create_dataframe(data, coordinate_amount=20)
+        temp = create_dataframe(data, coordinate_amount=4)
         # concat the dataframe to the existing dataset
         df = pd.concat([df, temp], axis=0)
 
@@ -149,7 +149,7 @@ def generate_csv(kml_path, csv_path):
 if __name__ == '__main__':
 
     # Handles the creation of the normal dataset
-    generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv')
+    generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv')
 
     # Handles the creation of the test dataset
     generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv')

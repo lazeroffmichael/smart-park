@@ -13,55 +13,37 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import classification_report, confusion_matrix
 
 
-def main():
-    # Get the data from the file
-    paths = pd.read_csv('../simulations/csv_paths/cottage_grove_paths.csv')
-
-    # Get the first coordinate pair
-    pass
-
-
-def split_data(data, start, end):
-    """
-    Splits and returns the data from the columns
-
-    Parameters:
-        data: The original dataframe
-        start: Starting column (inclusive)
-        end: Ending column (exclusive)
-
-    Returns:
-        The split up columns of the data frame
-    """
-    return data[data.columns[start, end]]
-
-
 if __name__ == '__main__':
     # Open the data file
-    df = pd.read_csv('../simulations/csv_paths/cottage_grove_paths.csv')
+    df = pd.read_csv('../simulations/data/paths.csv')
+
+    # Testing data file
+    test_df = pd.read_csv('../simulations/data/test_paths.csv')
 
     # Get just the coordinate data for the x features
-    X = df[df.columns[1:61]]
+    x_train = df[df.columns[2:62]]
 
     # Y feature is whether the path enters the parking lot
-    label = df['enter-parking'].values
+    y_train = df['enter-parking'].values
 
-    print(X)
-    print(label)
+    print(x_train)
+    print(y_train)
 
-    # Split the training and testing data
-    X_train, X_test, y_train, y_test = train_test_split(X, label, test_size=0.25, random_state=101)
+    # Get the testing data from the testing data file
+    x_test = test_df[test_df.columns[2:62]]
+
+    y_test = test_df['enter-parking'].values
 
     # Scalar object
-    scaler = MinMaxScaler()
+    scalar = MinMaxScaler()
 
     # Scale the data
-    scaler.fit(X_train)
-    X_train = scaler.transform(X_train)
-    X_test = scaler.transform(X_test)
+    scalar.fit(x_train)
+    x_train = scalar.transform(x_train)
+    x_test = scalar.transform(x_test)
 
     # Early stop object - prevents initial overtraining from too many epochs
-    #early_stop = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=25)
+    early_stop = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=20)
 
     # Create model
     model = Sequential()
@@ -70,7 +52,7 @@ if __name__ == '__main__':
     model.add(Dense(60, activation='relu'))
 
     # Dropout layer 1
-    model.add(Dropout(0.3))
+    model.add(Dropout(0.5))
 
     model.add(Dense(45, activation='relu'))
 
@@ -78,7 +60,7 @@ if __name__ == '__main__':
     model.add(Dense(30, activation='relu'))
 
     # Dropout layer 2
-    model.add(Dropout(0.3))
+    model.add(Dropout(0.5))
 
     # Binary classifcation
     model.add(Dense(1, activation='sigmoid'))
@@ -87,22 +69,24 @@ if __name__ == '__main__':
     model.compile(loss='binary_crossentropy', optimizer='adam')
 
     # Fit model
+    model.fit(x=x_train,
+              y=y_train,
+              epochs=150,
+              validation_data=(x_test, y_test),
+              callbacks=early_stop)
+
     # model.fit(x=X_train,
     #           y=y_train,
-    #           epochs=300,
-    #           validation_data=(X_test, y_test),
-    #           callbacks=early_stop)
-
-    model.fit(x=X_train,
-              y=y_train,
-              epochs=50,
-              validation_data=(X_test, y_test))
+    #           epochs=50,
+    #           validation_data=(X_test, y_test))
 
     losses = pd.DataFrame(model.history.history)
 
-    losses.plot()
+    print(losses)
 
-    predictions = (model.predict(X_test) > 0.5).astype("int32")
+    print(losses.plot())
+
+    predictions = (model.predict(x_test) > 0.5).astype("int32")
 
     # Print results
     print(classification_report(y_test, predictions))
