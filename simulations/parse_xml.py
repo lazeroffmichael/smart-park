@@ -69,8 +69,10 @@ class ParseGoogleEarthPathXML(XMLParse):
                     # split to get the individual coordinates
                     values = c.split(",")
 
+                    values.pop(2)
+
                     # swap latitude and longitude positions
-                    values[0], values[1], values[2] = float(values[1]), float(values[0]), float(values[2])
+                    values[0], values[1] = float(values[1]), float(values[0])
 
                     for items in values:
                         temp.append(items)

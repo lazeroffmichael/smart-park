@@ -72,10 +72,8 @@ def create_dataframe(data, index_names=None, coordinate_amount=20):
     for index in range(1, coordinate_amount + 1):
         latitude = 'latitude_' + str(index)
         longitude = 'longitude_' + str(index)
-        altitude = 'altitude_relative_to_ground_' + str(index)
         columns.append(latitude)
         columns.append(longitude)
-        columns.append(altitude)
 
     columns.append('enter-parking')
 
@@ -99,7 +97,7 @@ def delete_files_from_directory(directory):
             os.remove(f'{directory}/{file}')
 
 
-def generate_csv(kml_path, csv_path):
+def generate_csv(kml_path, csv_path, coordinate_amount):
     """
     Generates the csv file with the coordinate data.
 
@@ -135,7 +133,7 @@ def generate_csv(kml_path, csv_path):
         # Get the coordinates from the file in a list
         data = earth.get_coordinates()
         # create the dataframe with the coordinates
-        temp = create_dataframe(data, coordinate_amount=4)
+        temp = create_dataframe(data, coordinate_amount=coordinate_amount)
         # concat the dataframe to the existing dataset
         df = pd.concat([df, temp], axis=0)
 
@@ -148,8 +146,14 @@ def generate_csv(kml_path, csv_path):
 
 if __name__ == '__main__':
 
-    # Handles the creation of the normal dataset
-    generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv')
+    # Handles the creation of the small trajectories dataset
+    generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv', coordinate_amount=4)
 
     # Handles the creation of the test dataset
-    generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv')
+    generate_csv(kml_path='test_small_trajectories', csv_path='./data/test_small_trajectories.csv', coordinate_amount=4)
+
+    # Handles the creation of the small trajectories dataset
+    generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv', coordinate_amount=20)
+
+    # Handles the creation of the test dataset
+    generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv', coordinate_amount=20)
