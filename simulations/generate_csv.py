@@ -146,14 +146,19 @@ def generate_csv(kml_path, csv_path, coordinate_amount):
 
 if __name__ == '__main__':
 
-    # Handles the creation of the small trajectories dataset
-    generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv', coordinate_amount=4)
+    # # Handles the creation of the small trajectories dataset
+    # generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv', coordinate_amount=4)
+    #
+    # # Handles the creation of the test dataset
+    # generate_csv(kml_path='test_small_trajectories', csv_path='./data/test_small_trajectories.csv', coordinate_amount=4)
+    #
+    # # Handles the creation of the small trajectories dataset
+    # generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv', coordinate_amount=20)
+    #
+    # # Handles the creation of the test dataset
+    # generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv', coordinate_amount=20)
 
-    # Handles the creation of the test dataset
-    generate_csv(kml_path='test_small_trajectories', csv_path='./data/test_small_trajectories.csv', coordinate_amount=4)
+    # Handles the creation of the poloygon geofence dataset
+    generate_csv(kml_path='polygon', csv_path='./data/polygon.csv', coordinate_amount=28)
 
-    # Handles the creation of the small trajectories dataset
-    generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv', coordinate_amount=20)
 
-    # Handles the creation of the test dataset
-    generate_csv(kml_path='test_kml_paths', csv_path='./data/test_paths.csv', coordinate_amount=20)

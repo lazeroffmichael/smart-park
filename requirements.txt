@@ -8,3 +8,4 @@ matplotlib
 sklearn
 mkdocs-material
 mkdocstrings
+shapely
