@@ -5,7 +5,7 @@ numpy
 jupyter
 seaborn
 matplotlib
-sklearn
+scikit-learn
 mkdocs-material
 mkdocstrings
 shapely
