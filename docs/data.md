@@ -3,6 +3,14 @@
 Using Google Earth, **104** simulated paths are created in the surrounding region of Cottage Grove Parking Garage at 
 UNLV.
 
+
+!!! tip "Strengthening Real Data With Created Data"
+    
+    In a real life scenario, it is expected that coordinate data for training the model would come from actual user 
+    data that is collected around the region of the parking garage. Because of the ease of creating new paths around 
+    the region of a parking garage in google earth, it is possible to strengthen the accuracy of a model that is being 
+    trained using only real data. 
+
 !!! info "All Simulated Paths"
 
     ![All](https://user-images.githubusercontent.com/56806733/123881389-681b2d80-d8f9-11eb-8f5a-8c2b66428802.png)
