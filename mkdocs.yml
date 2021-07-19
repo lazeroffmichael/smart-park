@@ -10,6 +10,7 @@ nav:
   - Components:
     - Data Simulation: data.md
     - Model: model.md
+    - Garage: garage.md
     - Cloud: cloud.md
     - App: app.md
 theme:
