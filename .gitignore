@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm .idea
 /.idea
+
+# Admin file firebase
+smart-parking-a52bb-firebase-adminsdk-mykpk-f8c7ad629b.json
