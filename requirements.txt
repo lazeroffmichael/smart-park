@@ -9,3 +9,4 @@ scikit-learn
 mkdocs-material
 mkdocstrings
 shapely
+firebase_admin==5.0.1
