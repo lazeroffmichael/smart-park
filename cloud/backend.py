@@ -31,6 +31,11 @@ OUTER_GEOFENCE_COORDINATES = [(36.11065520071664, -115.1413569181608), (36.11041
 # A polygon is created that is bounded by the geofence coordinates
 OUTER_GEOFENCE_POLYGON = Polygon(OUTER_GEOFENCE_COORDINATES)
 
+ENDPOINT = f"https://{os.getenv('REGION')}-ml.googleapis.com"
+CLIENT_OPTIONS = ClientOptions(api_endpoint=ENDPOINT)
+ML = discovery.build('ml', 'v1', client_options=CLIENT_OPTIONS)
+SCALER = joblib.load('../model/scaler.gz')
+
 
 def main(request):
     """
@@ -57,6 +62,42 @@ def determine_if_in_outer_geofence(last_coordinate):
 
     # Check if the coordinate is contained within the polygon.
     return OUTER_GEOFENCE_POLYGON.contains(Point(last_coordinate))
+
+
+def determine_if_returning_to_garage(coordinates):
+    """
+    Makes the cloud call to the ML model
+    Args:
+        coordinates: Coordinates to make the call with
+
+    Returns: Prediction on whether they are returning to the garage or not.
+
+    """
+    # The scaler object accepts a list containing the list of coordinates.
+    coords = [coordinates]
+
+    # Scale the data to be sent to the model
+    scaled_data = SCALER.transform(coords)
+
+    # Convert the transformed data from a np array to a normal list to be used in the request
+    request_body = {
+        'instances': transformed_data.tolist()
+    }
+
+    # Google cloud model name
+    name = f"projects/{os.getenv('projectId')}/models/{os.getenv('MODEL_NAME')}/versions/{os.getenv('VERSION_NAME')}"
+
+    # Construct the request body for the model
+    request = ML.projects().predict(
+        name=name,
+        body=request_body
+    )
+
+    # Make the request to the machine learning model and obtain the response.
+    response = request.execute()
+
+    for item in response[]
+
 
 
 

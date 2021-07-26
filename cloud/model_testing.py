@@ -9,7 +9,7 @@ import pandas as pd
 ENDPOINT = f"https://{os.getenv('REGION')}-ml.googleapis.com"
 CLIENT_OPTIONS = ClientOptions(api_endpoint=ENDPOINT)
 ML = discovery.build('ml', 'v1', client_options=CLIENT_OPTIONS)
-SCALER = joblib.load('../model/scaler.gz')
+SCALER = joblib.load('../api/resources/scaler.gz')
 
 scaler = MinMaxScaler()
 test_data_enter = [[36.11128658900951, -115.1407443542069, 36.11138568488752, -115.1407532525297, 36.11145950467051,
