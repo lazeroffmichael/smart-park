@@ -94,6 +94,14 @@ def determine_if_in_outer_geofence(last_coordinate):
 
 
 def run_model(coordinates):
+    """
+    Runs the machine learning model
+    Args:
+        coordinates: The list of 4 coordinates for the model
+
+    Returns: A 1 or 0 depending on the moddel prediction.
+
+    """
     # The scaler object accepts a list containg the list of coordinates
     coords = [coordinates]
 
@@ -108,7 +116,7 @@ def run_model(coordinates):
 
 class Pipeline(Resource):
     """
-    Main pipeline for handling the user interations
+    Main pipeline for handling the coordiate interactions
     """
     def post(self):
         args = pipeline_post_args.parse_args()
@@ -129,6 +137,7 @@ class Pipeline(Resource):
                 args['latitude_4'],
                 args['longitude_4'],
             ]
+            # Run the model and obtain the prediciton
             prediction = run_model(coordinate_list)
 
         return {'result': int(prediction)}, 200
