@@ -1,5 +1,5 @@
 """
-Testing module for backend.py
+Testing module for server.py
 """
 
 from cloud import backend

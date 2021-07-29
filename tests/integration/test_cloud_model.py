@@ -9,8 +9,8 @@ import pandas as pd
 ENDPOINT = f"https://{os.getenv('REGION')}-ml.googleapis.com"
 CLIENT_OPTIONS = ClientOptions(api_endpoint=ENDPOINT)
 ML = discovery.build('ml', 'v1', client_options=CLIENT_OPTIONS)
-SCALER = joblib.load('../../api/resources/scaler.gz')
-MODEL = tf.keras.models.load_model('../../api/resources/saved-model')
+SCALER = joblib.load('../../server/resources/scaler.gz')
+MODEL = tf.keras.models.load_model('../../server/resources/saved-model')
 
 
 def test_example():

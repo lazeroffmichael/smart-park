@@ -90,7 +90,6 @@ def delete_files_from_directory(directory):
     """
     Deletes the files from a directory.
     """
-    # TODO: Implement for generate csv so xml files are deleted before new creation
 
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -146,11 +145,11 @@ def generate_csv(kml_path, csv_path, coordinate_amount):
 
 if __name__ == '__main__':
 
-    # Handles the creation of the small trajectories dataset
-    generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv', coordinate_amount=4)
-
-    # Handles the creation of the test dataset
-    generate_csv(kml_path='test_small_trajectories', csv_path='./data/test_small_trajectories.csv', coordinate_amount=4)
+    # # Handles the creation of the small trajectories dataset
+    # generate_csv(kml_path='small_trajectories', csv_path='./data/small_trajectories.csv', coordinate_amount=4)
+    #
+    # # Handles the creation of the test dataset
+    # generate_csv(kml_path='test_small_trajectories', csv_path='./data/test_small_trajectories.csv', coordinate_amount=4)
 
     # # Handles the creation of the small trajectories dataset
     # generate_csv(kml_path='kml_paths', csv_path='./data/paths.csv', coordinate_amount=20)
@@ -161,4 +160,4 @@ if __name__ == '__main__':
     # # Handles the creation of the poloygon geofence dataset
     # generate_csv(kml_path='polygon', csv_path='./data/polygon.csv', coordinate_amount=28)
 
-
+    generate_csv(kml_path='region_placemarks', csv_path='./data/placemarks.csv', coordinate_amount=1)

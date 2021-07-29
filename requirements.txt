@@ -13,3 +13,5 @@ firebase_admin==5.0.1
 flask==2.0.1
 flask-restful==0.3.9
 requests==2.26.0
+joblib==1.0.1
+haversine==2.3.1

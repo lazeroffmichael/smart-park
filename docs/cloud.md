@@ -5,7 +5,6 @@ The Real Time Database (RTDB) will be used to contain the garage state and updat
 The firestore database will be used to hold other information (such as user information, coordinate information etc)
 
 ## ML Pipeline
-
 - Receive GPS coords
 - Receive ID of the user
 1) Determine if coords inside of geofence
@@ -40,3 +39,4 @@ individuals headed a certain direction are returning to the parking garage.
 ## Determining If A User Is Inside Of The Geofence
 Since the geofence is a defined set of coordinates, we can determine whether or not a user's GPS coordinates are 
 inside of the geofence by using an algorithm that determines whether a point is contained inside of a polygon. 
+

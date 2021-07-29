@@ -1,0 +1,8 @@
+flask==2.0.1
+flask-restful==0.3.9
+requests==2.26.0
+joblib==1.0.1
+haversine==2.3.1
+tensorflow==2.4.0rc0
+shapely==1.7.1
+firebase_admin==5.0.1
