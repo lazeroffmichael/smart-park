@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/app/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/cloud/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/data/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/garage/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lazeroffmichael.github.io/resources/model/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
