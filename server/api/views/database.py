@@ -145,7 +145,7 @@ def initialize_database():
     update(315, 315, ref, STAFF, compact=True)
 
 
-class DatabaseInstantiateAPI:
+class DatabaseInstantiateAPI(Resource):
     """
     Handles the routes for instantiating the database
     """

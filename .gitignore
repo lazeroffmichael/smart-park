@@ -136,3 +136,6 @@ server/resources/smart-parking-a52bb-firebase-adminsdk-mykpk-f8c7ad629b.json
 
 # AI Service Admin Credentials
 /smart-parking-a52bb-161dc900d2cd.json
+
+# DS Store files
+**.DS_Store
